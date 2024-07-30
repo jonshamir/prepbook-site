@@ -186,9 +186,13 @@ p {
     font-size: 1rem;
     color: #242a36;
     background-color: #fffcf9;
-    box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.08),
+    box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.1),
       inset 0px 5px 4px rgba(3, 7, 18, 0.06), 0px 1px 1px rgba(3, 7, 18, 0.08);
     outline: none;
+
+    &:focus {
+      outline: 2px solid #242a36;
+    }
   }
 
   ::placeholder {
@@ -203,7 +207,7 @@ p {
     color: #242a36;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #ebe3db;
+    background-color: #f6ebe0;
     /* https://smoothshadows.com/#djEsMiw1LDAuMDgsMjQsMzIsMCwjMDMwNzEyLCNmM2Y0ZjYsI2ZmZmZmZiwz */
     box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.742),
       0px 1px 1px rgba(3, 7, 18, 0.08), 0px 5px 4px rgba(3, 7, 18, 0.06),

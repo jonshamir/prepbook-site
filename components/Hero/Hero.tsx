@@ -6,7 +6,7 @@ export function Hero() {
       <br />
       <form
         method="post"
-        action="https://app.loops.so/api/newsletter-form/YOUR_FORM_ENDPOINT"
+        action="https://app.loops.so/api/newsletter-form/clz8v0ovs00az11liaobaaql9"
       >
         <input
           type="email"
