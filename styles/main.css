@@ -49,8 +49,7 @@ html {
 }
 
 ::selection {
-  background: var(--color-text);
-  color: var(--color-bg);
+  background: #a2c0ff91;
 }
 
 nav {
@@ -172,5 +171,54 @@ p {
   p {
     font-size: 1.2rem;
     margin: 0;
+  }
+
+  form {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  input[type="email"] {
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 500px;
+    font-size: 1rem;
+    color: #242a36;
+    background-color: #fffcf9;
+    box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.08),
+      inset 0px 5px 4px rgba(3, 7, 18, 0.06), 0px 1px 1px rgba(3, 7, 18, 0.08);
+    outline: none;
+  }
+
+  ::placeholder {
+    color: #242a36;
+    opacity: 0.4;
+  }
+
+  button {
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 500px;
+    color: #242a36;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ebe3db;
+    /* https://smoothshadows.com/#djEsMiw1LDAuMDgsMjQsMzIsMCwjMDMwNzEyLCNmM2Y0ZjYsI2ZmZmZmZiwz */
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.742),
+      0px 1px 1px rgba(3, 7, 18, 0.08), 0px 5px 4px rgba(3, 7, 18, 0.06),
+      0px 12px 9px rgba(3, 7, 18, 0.05), 0px 20px 15px rgba(3, 7, 18, 0.03),
+      0px 32px 24px rgba(3, 7, 18, 0.02);
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #fffcf9;
+    }
+    &:active {
+      /* https://smoothshadows.com/#djEsMiwyLDAuMDgsNyw3LDAsIzAzMDcxMiwjZjNmNGY2LCNmZmZmZmYsMw%3D%3D */
+      box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.742),
+        0px 2px 2px rgba(3, 7, 18, 0.08), 0px 7px 7px rgba(3, 7, 18, 0.04);
+    }
   }
 }
