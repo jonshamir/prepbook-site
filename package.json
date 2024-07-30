@@ -1,0 +1,44 @@
+{
+  "name": "shamir.com",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "node ./scripts/gen-rss.js && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fontsource/ia-writer-quattro": "^5.0.11",
+    "@fontsource/lexend": "^5.0.20",
+    "@napi-rs/simple-git-linux-x64-gnu": "^0.1.16",
+    "@react-three/drei": "^9.108.3",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/postprocessing": "^2.16.2",
+    "@sindresorhus/slugify": "^2.2.1",
+    "@types/three": "^0.166.0",
+    "gray-matter": "^4.0.3",
+    "meshline": "^3.3.1",
+    "next": "latest",
+    "next-themes": "0.2.1",
+    "nextra": "^2.0.0-beta.5",
+    "posthog-js": "^1.144.2",
+    "react": "^18.2.0",
+    "react-cusdis": "^2.1.3",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.30.2",
+    "rss": "^1.2.2",
+    "sass": "^1.77.5",
+    "slick-carousel": "^1.8.1",
+    "three": "^0.166.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "typescript": "^4.7.4"
+  }
+}
