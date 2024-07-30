@@ -111,34 +111,6 @@ p {
   margin: 1em 0;
 }
 
-span.description {
-  opacity: 0.7;
-  font-style: italic;
-}
-
-figure {
-  max-width: 36em;
-  margin: 2em 1em;
-  margin-left: 2em;
-
-  @media screen and (max-width: 600px) {
-    margin: 1em 0;
-  }
-
-  img {
-    max-width: 100%;
-  }
-}
-
-figcaption,
-.figcaption {
-  display: inline-block;
-  opacity: 0.5;
-  margin-left: 1em;
-  margin-top: 1em;
-  font-style: italic;
-}
-
 .button {
   display: inline-block;
   text-decoration: none;
@@ -174,19 +146,31 @@ figcaption,
   }
 }
 
-.hero {
-  object-fit: cover;
-  width: 100%;
-  margin: -100px auto auto;
-  border-radius: 1rem;
-  max-width: 1600px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  --aspect-ratio: (1.95);
+.Hero {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #f9e8c9;
+  color: #242a36;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  @media screen and (max-width: 600px) {
-    border-radius: 0;
-    margin-left: -1.5rem;
-    width: 100vw;
+  background-image: url("/pears.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0;
   }
 }
