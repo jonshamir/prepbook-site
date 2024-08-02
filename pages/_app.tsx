@@ -29,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
           title="RSS"
           href="/feed.xml"
         />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Component {...pageProps} />
     </>
