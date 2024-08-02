@@ -185,13 +185,13 @@ p {
 
   input,
   button {
-    border-radius: 500px;
-    padding: 0.3rem 1rem;
+    border-radius: 0.6em;
+    padding: 0.3rem 0.8rem;
     border: none;
     font-size: 1rem;
     color: #242a36;
     backdrop-filter: blur(5px);
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
   }
 
   input[type="email"] {
@@ -200,13 +200,15 @@ p {
       inset 0px 5px 4px rgba(3, 7, 18, 0.06), 0px 1px 1px rgb(255, 255, 255);
     outline: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: #fffdfb;
+      box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.179),
+        inset 0px 5px 4px rgba(3, 7, 18, 0.041), 0px 1px 1px rgb(255, 255, 255);
     }
 
     &:focus {
-      outline: 2px solid #242a3677;
-      background-color: #fffdfb;
+      outline: 2.5px solid #242a369e;
     }
   }
 
@@ -225,7 +227,7 @@ p {
       0px 32px 24px rgba(3, 7, 18, 0.02);
 
     &:hover {
-      background-color: #fffcf99d;
+      background-color: #fffcf9b1;
     }
     &:active {
       /* https://smoothshadows.com/#djEsMiwyLDAuMDgsNyw3LDAsIzAzMDcxMiwjZjNmNGY2LCNmZmZmZmYsMw%3D%3D */
