@@ -1,10 +1,14 @@
 import { useMutation } from "react-query";
 import { useState } from "react";
 
+interface FormData {
+  email: string;
+}
+
 export function EmailForm() {
   const [email, setEmail] = useState("");
 
-  const mutation = useMutation((formData: { email: string }) => {
+  const mutation = useMutation<Response, Error, FormData>((formData) => {
     const formBody = `email=${encodeURIComponent(formData.email)}`;
 
     return fetch(
@@ -19,7 +23,7 @@ export function EmailForm() {
     );
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     mutation.mutate({ email });
   };
@@ -41,7 +45,12 @@ export function EmailForm() {
         </form>
       )}
       {mutation.isError && (
-        <div className="message">Error: {mutation.error.message}</div>
+        <div className="message">
+          Error:{" "}
+          {mutation.error instanceof Error
+            ? mutation.error.message
+            : "Unknown error"}
+        </div>
       )}
       {mutation.isSuccess && (
         <div className="message">~ Thanks for signing up! ~</div>
