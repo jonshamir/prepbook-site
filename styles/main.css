@@ -70,11 +70,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lexend", sans-serif;
+  font-family: "Lexend Variable", sans-serif;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: 600;
 }
 
 footer {
@@ -199,6 +200,7 @@ p {
     box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.179),
       inset 0px 5px 4px rgba(3, 7, 18, 0.06), 0px 1px 1px rgb(255, 255, 255);
     outline: none;
+    width: 250px;
 
     &:hover,
     &:focus {
@@ -235,4 +237,10 @@ p {
         0px 2px 2px rgba(3, 7, 18, 0.08), 0px 7px 7px rgba(3, 7, 18, 0.04);
     }
   }
+}
+
+.EmailForm {
+  height: 6rem;
+  display: flex;
+  align-items: flex-start;
 }

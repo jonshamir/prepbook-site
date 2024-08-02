@@ -1,17 +1,11 @@
 import { useMutation } from "react-query";
 import { useState } from "react";
 
-function SignUpForm() {
-  const [firstName, setFirstName] = useState("");
+export function EmailForm() {
   const [email, setEmail] = useState("");
-  const [mailingListIds, setMailingListIds] = useState("");
 
-  const mutation = useMutation((formData) => {
-    const formBody = `firstName=${encodeURIComponent(
-      formData.firstName
-    )}&email=${encodeURIComponent(
-      formData.email
-    )}&mailingLists=${encodeURIComponent(formData.mailingListIds)}`;
+  const mutation = useMutation((formData: { email: string }) => {
+    const formBody = `email=${encodeURIComponent(formData.email)}`;
 
     return fetch(
       "https://localhost:2020/api/newsletter-form/YOUR_FORM_ENDPOINT",
@@ -27,36 +21,29 @@ function SignUpForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutation.mutate({ firstName, email, mailingListIds });
+    mutation.mutate({ email });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
-        placeholder="First Name"
-      />
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type="text"
-        value={mailingListIds}
-        onChange={(e) => setMailingListIds(e.target.value)}
-        placeholder="Mailing List IDs"
-      />
-      <button type="submit" disabled={mutation.isLoading}>
-        {mutation.isLoading ? "Submitting..." : "Submit"}
-      </button>
+    <div className="EmailForm">
+      {(mutation.isIdle || mutation.isLoading) && (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            required={true}
+          />
+          <button type="submit" disabled={mutation.isLoading}>
+            {mutation.isLoading ? "Joining..." : "Join Waitlist"}
+          </button>
+        </form>
+      )}
       {mutation.isError && (
         <div>An error occurred: {mutation.error.message}</div>
       )}
       {mutation.isSuccess && <div>Thank you for signing up!</div>}
-    </form>
+    </div>
   );
 }

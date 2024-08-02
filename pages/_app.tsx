@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import "@fontsource/lexend";
+import "@fontsource-variable/lexend";
 import "@fontsource/ia-writer-quattro";
 
 import "../styles/main.css";
