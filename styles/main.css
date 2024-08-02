@@ -32,7 +32,6 @@ html {
 
   padding: 2rem 5rem;
   font-family: "iA Writer Quattro", sans-serif;
-  font-size: 1.1em;
 
   color: var(--color-text);
   transition: color var(--transition-defaults),
@@ -49,8 +48,7 @@ html {
 }
 
 ::selection {
-  background: var(--color-text);
-  color: var(--color-bg);
+  background: #a2c0ff91;
 }
 
 nav {
@@ -72,11 +70,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lexend", sans-serif;
+  font-family: "Lexend Variable", sans-serif;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: 600;
 }
 
 footer {
@@ -172,5 +171,81 @@ p {
   p {
     font-size: 1.2rem;
     margin: 0;
+  }
+
+  form {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  input,
+  button {
+    border-radius: 0.6em;
+    padding: 0.3rem 0.8rem;
+    border: none;
+    font-size: 1rem;
+    color: #242a36;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+  input[type="email"] {
+    background-color: #fffcf9cd;
+    box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.179),
+      inset 0px 5px 4px rgba(3, 7, 18, 0.06), 0px 1px 1px rgb(255, 255, 255);
+    outline: none;
+    width: 250px;
+
+    &:hover,
+    &:focus {
+      background-color: #fffdfb;
+      box-shadow: inset 0px 1px 1px rgba(3, 7, 18, 0.179),
+        inset 0px 5px 4px rgba(3, 7, 18, 0.041), 0px 1px 1px rgb(255, 255, 255);
+    }
+
+    &:focus {
+      outline: 2.5px solid #242a369e;
+    }
+  }
+
+  ::placeholder {
+    color: #242a36;
+    opacity: 0.4;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: #f6ebe088;
+    /* https://smoothshadows.com/#djEsMiw1LDAuMDgsMjQsMzIsMCwjMDMwNzEyLCNmM2Y0ZjYsI2ZmZmZmZiwz */
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.742),
+      0px 1px 1px rgba(3, 7, 18, 0.08), 0px 5px 4px rgba(3, 7, 18, 0.06),
+      0px 12px 9px rgba(3, 7, 18, 0.05), 0px 20px 15px rgba(3, 7, 18, 0.03),
+      0px 32px 24px rgba(3, 7, 18, 0.02);
+
+    &:hover {
+      background-color: #fffcf9b1;
+    }
+    &:active {
+      /* https://smoothshadows.com/#djEsMiwyLDAuMDgsNyw3LDAsIzAzMDcxMiwjZjNmNGY2LCNmZmZmZmYsMw%3D%3D */
+      box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.742),
+        0px 2px 2px rgba(3, 7, 18, 0.08), 0px 7px 7px rgba(3, 7, 18, 0.04);
+    }
+  }
+}
+
+.EmailForm {
+  height: 6rem;
+  display: flex;
+  align-items: flex-start;
+
+  .message {
+    padding: 1.5em;
+    font-size: 1em;
   }
 }

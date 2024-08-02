@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import "@fontsource/lexend";
+import "@fontsource-variable/lexend";
 import "@fontsource/ia-writer-quattro";
 
 import "../styles/main.css";
@@ -29,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
           title="RSS"
           href="/feed.xml"
         />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Component {...pageProps} />
     </>
