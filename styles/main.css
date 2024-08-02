@@ -243,4 +243,9 @@ p {
   height: 6rem;
   display: flex;
   align-items: flex-start;
+
+  .message {
+    padding: 1.5em;
+    font-size: 1em;
+  }
 }

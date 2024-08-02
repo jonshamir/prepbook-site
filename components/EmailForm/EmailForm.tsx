@@ -8,7 +8,7 @@ export function EmailForm() {
     const formBody = `email=${encodeURIComponent(formData.email)}`;
 
     return fetch(
-      "https://localhost:2020/api/newsletter-form/YOUR_FORM_ENDPOINT",
+      "https://app.loops.so/api/newsletter-form/clz8v0ovs00az11liaobaaql9",
       {
         method: "POST",
         body: formBody,
@@ -41,9 +41,11 @@ export function EmailForm() {
         </form>
       )}
       {mutation.isError && (
-        <div>An error occurred: {mutation.error.message}</div>
+        <div className="message">Error: {mutation.error.message}</div>
       )}
-      {mutation.isSuccess && <div>Thank you for signing up!</div>}
+      {mutation.isSuccess && (
+        <div className="message">~ Thanks for signing up! ~</div>
+      )}
     </div>
   );
 }
