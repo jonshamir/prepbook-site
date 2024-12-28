@@ -12,6 +12,10 @@ export function Hero() {
       <QueryClientProvider client={queryClient}>
         <EmailForm />
       </QueryClientProvider>
+      <div className="links" style={{ display: "flex", gap: "16px" }}>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+      </div>
     </header>
   );
 }
